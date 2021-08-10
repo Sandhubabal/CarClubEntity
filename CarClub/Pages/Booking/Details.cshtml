@@ -1,0 +1,50 @@
+﻿@page
+@model CarClub.Pages.Booking.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+
+<div>
+    <h4>Details BookingCars</h4>
+    <hr />
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.CarId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.BookingDate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.CarId)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.BookingDate)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.BookingCars.id"  type="button" class="btn btn-info">Edit</a>
+    <a asp-page="./Index" type="button" class="btn btn-info">Back to List</a>
+</div>

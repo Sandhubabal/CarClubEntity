@@ -1,0 +1,49 @@
+﻿@page
+@model CarClub.Pages.Contact.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Contact Us</h4>
+    <hr />
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.CarModel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ContactUs.Message)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.CarModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.ContactUs.Message)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.ContactUs.id"  type="button" class="btn btn-info">Edit</a>
+    <a asp-page="./Index"  type="button" class="btn btn-info">Back to List</a>
+</div>

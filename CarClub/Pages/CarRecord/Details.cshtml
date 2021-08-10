@@ -1,0 +1,43 @@
+﻿@page
+@model CarClub.Pages.CarRecord.DetailsModel
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<div>
+    <h4>Car</h4>
+    <hr />
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car.CarName)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car.CarModel)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Car.Price)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.Car.CarName)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Car.CarModel)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.Car.Price)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+<div>
+    <a asp-page="./Edit" asp-route-id="@Model.Car.Id"  type="button" class="btn btn-info">Edit</a>
+    <a asp-page="./Index"  type="button" class="btn btn-info">Back to List</a>
+</div>

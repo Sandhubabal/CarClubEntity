@@ -1,0 +1,52 @@
+﻿@page
+@model CarClub.Pages.Booking.DeleteModel
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Delete BookingCars</h4>
+    <hr />
+
+    <table class="table table-bordered">
+        <thead class="thead-dark">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.Name)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.CarId)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.Contact)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.BookingCars.BookingDate)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.Name)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.CarId)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.Contact)
+                </td>
+                <td>
+                    @Html.DisplayFor(model => model.BookingCars.BookingDate)
+                </td>
+            </tr>
+        </tbody>
+    </table>
+    <form method="post">
+        <input type="hidden" asp-for="BookingCars.id" />
+        <input type="submit" value="Delete" class="btn btn-danger" />
+        <a asp-page="./Index" type="button" class="btn btn-info">Back to List</a>
+    </form>
+</div>
